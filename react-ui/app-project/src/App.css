@@ -10,10 +10,13 @@ body {
 }
 
 .container {
+
   width: 90vw; /* Tar upp 90% av skärmens bredd */
   height: 90vh; /* Tar upp 90% av skärmens höjd */
   max-width: 1200px; /* Sätter en maxbredd för större skärmar */
-  background: white; /* Gör själva boxen vit */
+  background: rgb(255, 255, 255); /* Gör själva boxen vit */
   padding: 20px;
   border-radius: 8px; /* Rundade hörn */
 }
+
+
