@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function NoteInput() {
+function NoteInput({ addNote }) {
     const [text, setText] = useState("");
 
 
