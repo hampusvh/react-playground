@@ -1,14 +1,22 @@
 import "./App.css";
 import NoteInput from "./components/NoteInput";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
-  const [notes, setNotes] = useState([]);
+
+  const [notes, setNotes] = useState(() => {
+    const savedNotes = localStorage.getItem("notes");
+    return savedNotes ? JSON.parse(savedNotes) : [];
+  });
 
   const addNote = (newNote) => {
-    setNotes([...notes, newNote]);
-    console.log("Uppdaterad lista:", notes);
+    const updatedNotes = [...notes, newNote];
+    setNotes(updatedNotes);
   };
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   return (
     <div className="input-container">
