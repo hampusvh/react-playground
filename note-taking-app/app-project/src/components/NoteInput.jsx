@@ -7,6 +7,7 @@ function NoteInput({ addNote }) {
 return (
     <div className="input-container">
         <input 
+        className="note-input"
         type="text"
         placeholder="write something..."
         value={text}
