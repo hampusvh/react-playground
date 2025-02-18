@@ -19,12 +19,12 @@ function App() {
   }, [notes]);
 
   return (
-    <div className="input-container">
+    <div className="outer-container">
       <NoteInput addNote={addNote} />
 
     <div className="note-container">
       {notes.map((note, index) => (
-        <p key={index}>{note}</p>
+        <div key={index} className="note-box">{note}</div>
       ))}
     </div>
     </div>

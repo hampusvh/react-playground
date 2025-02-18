@@ -5,7 +5,7 @@ function NoteInput({ addNote }) {
 
 
 return (
-    <div>
+    <div className="input-container">
         <input 
         type="text"
         placeholder="write something..."
@@ -13,7 +13,7 @@ return (
         onChange = {(e) => setText(e.target.value)}
         />
         <br />
-        <button onClick={() => {
+        <button className="save-button" onClick={() => {
             addNote(text);
             setText("");
         }}>save</button>

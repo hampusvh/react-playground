@@ -9,7 +9,7 @@ body {
   padding: 0;
 }
 
-.input-container {
+.outer-container {
 
   width: 90vw; /* Tar upp 90% av skärmens bredd */
   height: 90vh; /* Tar upp 90% av skärmens höjd */
@@ -19,8 +19,25 @@ body {
   border-radius: 8px; /* Rundade hörn */
 }
 
+.input-container {
+  background-color: red;
+  padding: 10px;
+}
+
+.save-button {
+  color: blue;
+}
+
 .note-container {
-  background-color: grey;
+  background-color: rgb(83, 81, 81);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.note-box {
+  margin-top: 5px;
+  background-color: aliceblue;
 }
 
 
