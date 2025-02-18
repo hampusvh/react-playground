@@ -35,10 +35,10 @@ function App() {
 
     <div className="note-container">
       {notes.map((note, index) => (
-        <div key={index} className="note-box">{note}<div>
+        <div key={index} className="note-box"><p>{note}</p><div>
           <button
             className="edit-btn"
-            onClick={() => editNote(index, promt("edit note:", note))}
+            onClick={() => editNote(index, prompt("edit note:", note))}
             >✏️</button>
             <button className="delete-btn" onClick={() => deleteNote(index)}>❌</button>
           </div>
