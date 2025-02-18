@@ -14,6 +14,16 @@ function App() {
     setNotes(updatedNotes);
   };
 
+  const editNote = (index, newText) => {
+    const updatedNotes = [...notes];
+    updatedNotes[index] = newText;
+    setNotes(updatedNotes);
+  };
+
+  const deleteNote = (index) => {
+    setNotes(notes.filter((_, i) => i !== index));
+  };
+
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
@@ -25,7 +35,14 @@ function App() {
 
     <div className="note-container">
       {notes.map((note, index) => (
-        <div key={index} className="note-box">{note}</div>
+        <div key={index} className="note-box">{note}<div>
+          <button
+            className="edit-btn"
+            onClick={() => editNote(index, promt("edit note:", note))}
+            >✏️</button>
+            <button className="delete-btn" onClick={() => deleteNote(index)}>❌</button>
+          </div>
+        </div>
       ))}
     </div>
     </div>
