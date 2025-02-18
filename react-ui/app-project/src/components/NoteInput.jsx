@@ -13,7 +13,10 @@ return (
         onChange = {(e) => setText(e.target.value)}
         />
         <br />
-        <button onClick={() => console.log(text)}>save</button>
+        <button onClick={() => {
+            addNote(text);
+            setText("");
+        }}>save</button>
     </div>
 );
 

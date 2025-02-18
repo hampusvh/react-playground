@@ -11,8 +11,14 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className="input-container">
       <NoteInput addNote={addNote} />
+
+    <div className="note-container">
+      {notes.map((note, index) => (
+        <p key={index}>{note}</p>
+      ))}
+    </div>
     </div>
   );
 }
