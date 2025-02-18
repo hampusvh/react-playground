@@ -3,7 +3,6 @@ import NoteInput from "./components/NoteInput";
 import { useState, useEffect } from "react";
 
 function App() {
-
   const [notes, setNotes] = useState(() => {
     const savedNotes = localStorage.getItem("notes");
     return savedNotes ? JSON.parse(savedNotes) : [];
@@ -33,19 +32,28 @@ function App() {
       <div className="app-container">
         <NoteInput addNote={addNote} />
 
-    <div className="note-container">
-      {notes.map((note, index) => (
-        <div key={index} className="note-box"><p>{note}</p><div>
-          <button
-            className="edit-btn"
-            onClick={() => editNote(index, prompt("edit note:", note))}
-            >✏️</button>
-            <button className="delete-btn" onClick={() => deleteNote(index)}>❌</button>
-          </div>
+        <div className="note-container">
+          {notes.map((note, index) => (
+            <div key={index} className="note-box">
+              <p>{note}</p>
+              <div>
+                <button
+                  className="edit-btn"
+                  onClick={() => editNote(index, prompt("edit note:", note))}
+                >
+                  ✏️
+                </button>
+                <button
+                  className="delete-btn"
+                  onClick={() => deleteNote(index)}
+                >
+                  ❌
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-    </div>
+      </div>
     </div>
   );
 }

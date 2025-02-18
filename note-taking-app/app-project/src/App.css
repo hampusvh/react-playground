@@ -54,6 +54,11 @@ body {
   transition: transform 0.2s ease-in-out;
 }
 
+.save-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+}
+
 .save-button:active {
   transform: scale(0.9);
 }
@@ -74,9 +79,6 @@ body {
   margin-top: 10px;
 }
 
-.note-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
-}
+
 
 

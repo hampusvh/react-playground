@@ -1,26 +1,29 @@
 import { useState } from "react";
 
 function NoteInput({ addNote }) {
-    const [text, setText] = useState("");
+  const [text, setText] = useState("");
 
-
-return (
+  return (
     <div className="input-container">
-        <input 
+      <input
         className="note-input"
         type="text"
         placeholder="write something..."
         value={text}
-        onChange = {(e) => setText(e.target.value)}
-        />
-        <br />
-        <button className="save-button" onClick={() => {
-            addNote(text);
-            setText("");
-        }}>save</button>
+        onChange={(e) => setText(e.target.value)}
+      />
+      <br />
+      <button
+        className="save-button"
+        onClick={() => {
+          addNote(text);
+          setText("");
+        }}
+      >
+        save
+      </button>
     </div>
-);
-
+  );
 }
 
 export default NoteInput;
