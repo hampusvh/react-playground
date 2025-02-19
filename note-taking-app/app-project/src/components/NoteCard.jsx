@@ -11,6 +11,11 @@ function NoteCard({ note, index, editNote, deleteNote }) {
         setIsEditing(false);
     };
 
+    const handleCancel = () => {
+        setNewText(note);
+        setIsEditing(false);
+    };
+
   return (
     <div className="note-box">
       {isEditing ? (
@@ -21,7 +26,8 @@ function NoteCard({ note, index, editNote, deleteNote }) {
         onChange={(e) => setNewText(e.target.value)}
         className="edit-input"
         />
-        <button className="save-btn" onClick={handleSave}>💾 Save</button>
+        <button className="save-btn" onClick={handleSave}>💾 save</button>
+        <button className="cancel-btn" onClick={handleCancel}>❌ cancel</button>
         </div>
       ) : (
         <div>
