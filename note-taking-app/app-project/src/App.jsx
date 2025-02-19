@@ -10,7 +10,7 @@ function App() {
   });
 
   const addNote = (newNote) => {
-    const updatedNotes = [...notes, newNote];
+    const updatedNotes = [newNote, ...notes];
     setNotes(updatedNotes);
   };
 
@@ -31,9 +31,11 @@ function App() {
   return (
     <div className="app-wrapper">
       <div className="app-container">
-        <NoteInput addNote={addNote} />
+
 
         <SavedNotes notes={notes} editNote={editNote} deleteNote={deleteNote} />
+
+        <NoteInput addNote={addNote} />
 
               </div>
             </div>

@@ -25,11 +25,13 @@ body {
 
 .app-container {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto; /* Två rader: en för input, en för anteckningar */
+
+  grid-template-rows: 1fr auto;
   gap: 20px;
   justify-content: center;
   align-items: center;
+  height: 90vh;
+  width: 90vw;
 }
 
 /* ✏️ Input-sektion */
@@ -40,7 +42,9 @@ body {
   align-items: center;
   background: rgb(101, 97, 97);
   padding: 10px;
-  max-width: auto;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
 }
 
 .note-input {
@@ -79,17 +83,39 @@ body {
   padding: 15px;
   border-radius: 8px;
   margin-top: 10px;
-  width: 500px;
+  width: 100%;
+  max-height: 70vh;
+  overflow-y: auto;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Flexibla rutor */
+  gap: 15px;
+  grid-auto-flow: dense; /* Fyll raderna från vänster */
 }
 
+
+
+
 .note-box {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
+  background: #222;
+  color: #fff;
+  border-radius: 12px;
   padding: 15px;
   transition: 0.3s ease;
-  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px; /* Gör rutorna lika höga */
 }
+
+
+.note-box:hover {
+  transform: translateY(-3px); /* Lyft kortet vid hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
 
 /* 🖊 Redigeringsläge */
 .edit-input {
