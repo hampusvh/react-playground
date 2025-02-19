@@ -1,5 +1,6 @@
 import "./App.css";
 import NoteInput from "./components/NoteInput";
+import SavedNotes from "./components/SavedNotes";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -32,30 +33,12 @@ function App() {
       <div className="app-container">
         <NoteInput addNote={addNote} />
 
-        <div className="note-container">
-          {notes.map((note, index) => (
-            <div key={index} className="note-box">
-              <p>{note}</p>
-              <div>
-                <button
-                  className="edit-btn"
-                  onClick={() => editNote(index, prompt("edit note:", note))}
-                >
-                  ✏️
-                </button>
-                <button
-                  className="delete-btn"
-                  onClick={() => deleteNote(index)}
-                >
-                  ❌
-                </button>
+        <SavedNotes notes={notes} editNote={editNote} deleteNote={deleteNote} />
+
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
+          );
+
+        }
 
 export default App;
