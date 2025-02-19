@@ -1,18 +1,19 @@
-/* 🔍 Tillfällig ram för att se layouten */
 * {
-  border: 1px solid rgb(255, 187, 0);
+  border: 1px solid red;
 }
 
-/* 🌍 Global styling */
 body {
   background: linear-gradient(135deg, #1a1a1a, #d79f9f);
   color: #eee;
+
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-/* 🏠 Huvudlayout */
+
 .app-wrapper {
   display: flex;
   align-items: center;
@@ -23,21 +24,22 @@ body {
 
 .app-container {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto; /* Två rader: en för input, en för anteckningar */
-  gap: 20px;
+  grid-template-columns: 1fr; /* En kolumn som anpassar sig */
+  grid-template-rows: auto auto; /* Två rader, en för input och en för anteckningar */
+  gap: 20px; /* Avstånd mellan raderna */
   justify-content: center;
   align-items: center;
 }
 
-/* ✏️ Input-sektion */
+
 .input-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background: rgb(101, 97, 97);
   padding: 10px;
+  max-width: auto;
 }
 
 .note-input {
@@ -48,7 +50,6 @@ body {
   border-radius: 5px;
 }
 
-/* 💾 Spara-knapp */
 .save-button {
   background: linear-gradient(45deg, #27ae60, #2ecc71);
   border: none;
@@ -70,7 +71,7 @@ body {
   transform: scale(0.95);
 }
 
-/* 📝 Antecknings-sektion */
+
 .note-container {
   background-color: rgb(101, 97, 97);
   padding: 15px;
@@ -88,7 +89,6 @@ body {
   margin-top: 10px;
 }
 
-/* 🖊 Redigeringsläge */
 .edit-input {
   width: 100%;
   padding: 8px;
@@ -97,7 +97,6 @@ body {
   font-size: 16px;
 }
 
-/* ✅ Redigera & Avbryt-knappar */
 .save-btn, .cancel-btn {
   background-color: #5c67f2;
   color: white;
