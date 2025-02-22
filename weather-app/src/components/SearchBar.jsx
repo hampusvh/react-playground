@@ -1,18 +1,29 @@
+import {useState} from "react";
 
+function SearchBar ({ onSearch }) {
 
-function SearchBar ({ SearchBar }) {
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const handleSearch = () => {
+        if (searchTerm.trim() !== "") {
+            onSearch(searchTerm);
+        }
+    };
 
     return (
         <div>
             <input type="text"
-            placeholder="search">
+            placeholder="...search"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            />
             
             <button
-            onClick={search}>Search</button>
-            </input>
+            onClick={handleSearch}>Search</button>
+            
         </div>
     );
 
 }
 
-export detfault SearchBar;
+export default SearchBar;
