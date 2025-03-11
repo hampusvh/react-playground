@@ -1,1 +1,1 @@
-En samling av små projekt och experiment för att lära mig och komma igång med React. Här testar jag olika koncept, komponenter och funktioner utan att bygga fullständiga applikationer.
+Det här är en samling av små projekt och experiment som jag har skapat för att lära mig och komma igång med React. Syftet är att testa olika koncept, komponenter och funktioner i en flexibel miljö utan att bygga fullständiga applikationer. Jag använder detta repo som en lekplats för att utforska och förbättra mina React-kunskaper.
