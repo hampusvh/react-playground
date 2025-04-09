@@ -1,0 +1,184 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  /* Staplar input och lista vertikalt */
+  align-items: center;
+  /* Centrerar innehållet */
+  gap: 10px;
+  /* Ger avstånd mellan inputContainer och listContainer */
+  width: 100%;
+  max-width: 400px;
+  /* Håller alla element lika breda */
+  margin: 0 auto;
+  /* Centrerar hela wrappern på sidan */
+}
+
+h1 {
+  color: rgb(0, 88, 73);
+  font-size: 35px;
+}
+
+
+.inputContainer {
+
+  min-width: 700px;
+  padding: 4px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.inputField {
+  width: 97%;
+
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #1d7e71;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s ease-in-out;
+}
+
+.inputField:focus {
+  border: 1px solid #000000;
+  box-shadow: 1 1 5px rgba(135, 123, 147, 0.5);
+}
+
+.addButton {
+  margin-top: 15px;
+  width: 100%;
+  background: #1c1d1d;
+  color: rgb(147, 158, 151);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out;
+}
+
+.addButton:hover {
+  background: #202122;
+
+}
+
+.listContainer {
+  border: 1px solid rgb(0, 88, 73);
+  width: 700px;
+  height: 500px;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(0, 88, 73) #060606;
+  padding-right: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Liten rörelse uppåt */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.todoItem {
+
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #1d7e71;
+  border-radius: 8px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  animation: fadeIn 0.2s ease-out; /* Animering vid tillägg */
+  flex-wrap: nowrap;
+  gap: 10px;
+
+}
+
+.todoText {
+  flex: 1;
+  max-width: 93%;
+  overflow-x: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  scrollbar-color: rgb(0, 88, 73) black;
+  scrollbar-width: thin;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
+  
+}
+
+
+.todoContent {
+  display: flex;
+  flex-direction: column; /* Gör att texten och datumet hamnar på olika rader */
+  flex: 1;
+  min-width: 0;
+}
+
+.todoDate {
+  font-size: 12px;
+  color: rgb(43, 187, 161);
+  margin-top: 4px;
+  display: block;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+  accent-color: #2e3935; /* Färgsätter checkboxen */
+}
+
+
+
+ul {
+  list-style-type: none;
+  /* Tar bort punktlistor */
+  margin: 0;
+  /* Tar bort standardmarginalen */
+  padding: 0;
+  /* Tar bort standardpaddingen */
+}
+
+.deleteButton {
+  color: rgb(193, 61, 61);
+  flex-shrink: 0;
+  min-width: 60px;
+  text-align: center;
+  height: 35px;
+  margin-left: auto;
+}
+
+.deleteButton:hover {
+  border: 1px solid rgb(193, 61, 61);
+}
+
+.completed {
+  color: orange;
+  text-decoration: line-through;
+}

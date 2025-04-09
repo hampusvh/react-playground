@@ -1,0 +1,143 @@
+/* 🔍 Tillfällig ram för att se layouten */
+* {
+  border: 1px solid red;
+}
+
+/* 🌍 Global styling */
+body {
+  background: linear-gradient(135deg, #1a1a1a, #d79f9f);
+  color: #eee;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🏠 Huvudlayout */
+.app-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f4f4f4;
+}
+
+.app-container {
+  display: grid;
+
+  grid-template-rows: 1fr auto;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 90vw;
+}
+
+/* ✏️ Input-sektion */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(101, 97, 97);
+  padding: 10px;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+}
+
+.note-input {
+  color: orange;
+  background-color: rgb(232, 227, 227);
+  width: 200px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+/* 💾 Spara-knapp */
+.save-button {
+  background: linear-gradient(45deg, #27ae60, #2ecc71);
+  border: none;
+  padding: 12px 18px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 255, 127, 0.3);
+}
+
+.save-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 255, 127, 0.6);
+}
+
+.save-button:active {
+  transform: scale(0.95);
+}
+
+/* 📝 Antecknings-sektion */
+.note-container {
+  background-color: rgb(101, 97, 97);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  width: 100%;
+  max-height: 70vh;
+  overflow-y: auto;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Flexibla rutor */
+  gap: 15px;
+  grid-auto-flow: dense; /* Fyll raderna från vänster */
+}
+
+
+
+
+.note-box {
+  background: #222;
+  color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px; /* Gör rutorna lika höga */
+}
+
+
+.note-box:hover {
+  transform: translateY(-3px); /* Lyft kortet vid hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* 🖊 Redigeringsläge */
+.edit-input {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #5c67f2;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* ✅ Redigera & Avbryt-knappar */
+.save-btn, .cancel-btn {
+  background-color: #5c67f2;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.save-btn:hover, .cancel-btn:hover {
+  background-color: #4a54e1;
+}
