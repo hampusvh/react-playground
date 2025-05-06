@@ -1,1 +1,5 @@
-Det här är en samling av små projekt och experiment som jag har skapat för att lära mig och komma igång med React. Syftet är att testa olika koncept, komponenter och funktioner i en flexibel miljö utan att bygga fullständiga applikationer. Jag använder detta repo som en lekplats för att utforska och förbättra mina React-kunskaper.
+## ⚙️ React Playground
+
+En samling små projekt och experiment för att lära mig React, testa idéer och förbättra kunskaper.  
+
+Varje mapp är ett fristående test – inget är färdigt, allt är för lärande.
