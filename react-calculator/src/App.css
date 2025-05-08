@@ -1,0 +1,96 @@
+body {
+  background-color: rgb(179, 179, 179);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background-color: rgb(78, 78, 79);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  margin: auto;
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 5px;
+  transform: scale(1.3);
+}
+
+.display {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px 10px;
+  background-color: rgb(125, 123, 123);
+  color: rgb(78, 251, 127);
+}
+
+.button-grid {
+  margin-top: 5px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #9f9d9d;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #dcdcdc;
+}
+
+button:active {
+  background-color: #c0c0c0;
+}
+
+button[value="="] {
+  background-color: #66ff99bc;
+  font-weight: bold;
+}
+
+button[value="+"],
+button[value="-"],
+button[value="*"],
+button[value="/"] {
+  background-color: #ffd166;
+  font-weight: bold;
+}
+
+.equals {
+  grid-column: span 2;
+}
+
+.dummy {
+  grid-column: span 2;
+  background: transparent;
+  border: none;
+  cursor: default;
+}
+
+.dummy:hover,
+.dummy:active {
+  background-color: transparent;
+}
+
+input:focus {
+  outline: none;
+}
