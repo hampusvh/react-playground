@@ -1,0 +1,62 @@
+:root {
+  --primary-color: #00c9ff;
+  --accent-color: #0077cc;
+  --bg-color: #121c29;
+  --text-color: #ffffff;
+  --card-bg: #1c2636;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --radius: 8px;
+  --font-main: "Helvetica Neue", sans-serif;
+}
+
+.theme-blue {
+  --primary-color: #00c9ff;
+  --accent-color: #0077cc;
+  --bg-color: #121c29;
+  --text-color: #ffffff;
+  --card-bg: #1c2636;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --radius: 8px;
+  --font-main: "Helvetica Neue", sans-serif;
+}
+
+.theme-green {
+  --primary-color: #33cc99;
+  --accent-color: #29b17e;
+  --bg-color: #0e1b15;
+  --text-color: #ffffff;
+  --card-bg: #174434;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --radius: 8px;
+  --font-main: "Helvetica Neue", sans-serif;
+}
+
+.theme-light {
+  --primary-color: #0077cc;
+  --accent-color: #00aaff;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f2f2f2;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --radius: 8px;
+  --font-main: "Helvetica Neue", sans-serif;
+}
+
+.theme-retro {
+  --primary-color: #2f7f74;
+  --accent-color: #8be28d;
+  --bg-color: #f1ede4;
+  --text-color: #112c2e;
+  --card-bg: #003f43;
+  --card-shadow: rgba(0, 0, 0, 0.15);
+  --radius: 10px;
+  --font-main: "Inter", sans-serif;
+}
+.theme-professional {
+  --primary-color: #10b981;
+  --accent-color: #34d399;
+  --bg-color: #f0fdf4;
+  --text-color: #064e3b;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.08);
+}

@@ -1,0 +1,60 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+.header select {
+  padding: 0.4rem 0.6rem;
+  margin-top: 0.5rem;
+  border-radius: var(--radius);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  font-family: var(--font-main);
+}
+
+.navbar {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 1rem;
+  box-shadow: 0 0 10px var(--card-shadow);
+  border-radius: var(--radius);
+}
+
+.main-content {
+  flex: 1;
+  background-color: var(--bg-color);
+  padding: 1rem;
+}
+
+.footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem;
+}
