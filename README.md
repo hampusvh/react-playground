@@ -1,5 +1,14 @@
-## ⚙️ React Playground
+<h1 align="center">🧪 React Experiments</h1>
 
-En samling små projekt och experiment för att lära mig React, testa idéer och förbättra kunskaper.  
+<p align="center">
+  A collection of small projects and experiments to explore React,<br>
+  test ideas, and improve my skills.
+</p>
 
-Varje mapp är ett fristående test – inget är färdigt, allt är för lärande.
+---
+<p align="center">
+Each folder is a self-contained test. 
+<br>
+Nothing is finished - everything is built for learning.
+</p>
+
